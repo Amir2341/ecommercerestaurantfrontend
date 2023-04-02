@@ -7,7 +7,10 @@ import Image from "next/image";
 const Navbar: FC = () => {
   const cart = useSelector((state: any) => state.cart);
   const getItemsCount = () => {
-    return cart.reduce((accumulator, item) => accumulator + item.quantity, 0);
+    return cart.reduce(
+      (accumulator: any, item: any) => accumulator + item.quantity,
+      0
+    );
   };
   return (
     <nav className="sticky p-5 bg-black  shadow md:flex md:items-center md:justify-between">

@@ -1,4 +1,3 @@
-"use client";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/cart.slice";
 import { FC } from "react";

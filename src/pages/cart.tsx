@@ -18,7 +18,7 @@ const CartPage: FC = () => {
 
   const getTotalPrice = () => {
     return cart.reduce(
-      (accumulator, item) => accumulator + item.quantity * item.price,
+      (accumulator: any, item: any) => accumulator + item.quantity * item.price,
       0
     );
   };
@@ -39,7 +39,7 @@ const CartPage: FC = () => {
         </div>
       ) : (
         <>
-          {cart.map((item) => (
+          {cart.map((item: any) => (
             <div
               key={item._id}
               className="flex justify-between items-center border-b-2 py-4"
