@@ -1,7 +1,7 @@
 import { FC } from "react";
 import axios from "axios";
 
-const PayButton: FC = ({ cartItems }) => {
+const PayButton: FC = ({ cartItems }: any) => {
   const handleCheckout = async () => {
     axios
       .post(`http://localhost:8000/stripe/create-checkout-session`, {
