@@ -4,9 +4,12 @@ import axios from "axios";
 const PayButton: FC<any> = ({ cartItems }) => {
   const handleCheckout = async () => {
     axios
-      .post(`http://localhost:8000/stripe/create-checkout-session`, {
-        cartItems,
-      })
+      .post(
+        `https://restaurantmenu.cyclic.app/stripe/create-checkout-session`,
+        {
+          cartItems,
+        }
+      )
       .then((res) => {
         if (res.data.url) {
           window.location.href = res.data.url;
