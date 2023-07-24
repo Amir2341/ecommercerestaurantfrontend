@@ -5,6 +5,7 @@ import { AiOutlineMinus } from "react-icons/ai";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import Link from "next/link";
 import { FC } from "react";
+import PayButton from "./paybutton";
 // Importing actions from  cart.slice.js
 import {
   incrementQuantity,
@@ -66,9 +67,7 @@ const CartPage: FC = () => {
           ))}
           <h2>Grand Total: £ {getTotalPrice().toFixed(2)}</h2>
           <div>
-            <button className="rounded-md bg-black py-3 px-8 text-center font-medium text-white hover:bg-gray-700">
-              Checkout
-            </button>
+            <PayButton cartItems={cart} />
           </div>
         </>
       )}
